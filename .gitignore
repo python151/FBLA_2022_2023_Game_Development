@@ -1,33 +1,3 @@
-
-Skip to content
-Pull requests
-Issues
-Codespaces
-Marketplace
-Explore
-@python151
-python151 /
-FBLA_2021-2022_Game_Development
-Public
-
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-
-    Settings
-
-FBLA_2021-2022_Game_Development/.gitignore
-@python151
-python151 Uploaded Builds, and gitignore
-Latest commit 09d892d Jan 25, 2022
-History
-1 contributor
-47 lines (39 sloc) 626 Bytes
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
@@ -75,20 +45,3 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-
-    Terms
-    Privacy
-    Security
-    Status
-    Docs
-    Contact GitHub
-    Pricing
-    API
-    Training
-    Blog
-    About
-
-FBLA_2021-2022_Game_Development/.gitignore at main · python151/FBLA_2021-2022_Game_Development
