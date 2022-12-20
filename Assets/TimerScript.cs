@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class TimerScript : MonoBehaviour
 {
+    public static float initalTime;
     public float start_time;
     private TextMeshProUGUI component;
     public static float time = 0;
@@ -13,7 +14,9 @@ public class TimerScript : MonoBehaviour
     void Start()
     {
         component = transform.GetComponent<TextMeshProUGUI>();
+        
         time = start_time;
+        initalTime = start_time;
     }
 
     // Update is called once per frame

@@ -13,8 +13,10 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/PauseMenuScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/VolumeInputSetting.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UserAnswerInputScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ScoreBoardScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SettingsInputComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../unity/2018.4.19f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/GraphicRaycaster.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -25,9 +27,12 @@
         <option value="$PROJECT_DIR$/Assets/SettingsHomeButton.cs" />
         <option value="$PROJECT_DIR$/Assets/BackButton.cs" />
         <option value="$PROJECT_DIR$/Assets/LoadScene.cs" />
-        <option value="$PROJECT_DIR$/Assets/TimerScript.cs" />
         <option value="$PROJECT_DIR$/Assets/ScoreBoardScript.cs" />
         <option value="$PROJECT_DIR$/Assets/PauseMenuScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/TimerScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/UserAnswerInputScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/DictionaryScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/SinglePlayerGameManager.cs" />
       </list>
     </option>
   </component>
@@ -76,7 +81,13 @@
       <workItem from="1671421543079" duration="1004000" />
       <workItem from="1671423533892" duration="1499000" />
       <workItem from="1671425367976" duration="79499000" />
-      <workItem from="1671505940653" duration="1596000" />
+      <workItem from="1671505940653" duration="42509000" />
+      <workItem from="1671549189090" duration="1713000" />
+      <workItem from="1671550921205" duration="1916000" />
+      <workItem from="1671552854805" duration="1795000" />
+      <workItem from="1671554680067" duration="1034000" />
+      <workItem from="1671575466406" duration="1793000" />
+      <workItem from="1671577288692" duration="949000" />
     </task>
     <servers />
   </component>
@@ -89,9 +100,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="857" y="-849" key="search.everywhere.popup" timestamp="1671425414354">
-      <screen x="0" y="-1080" width="1920" height="1040" />
+    <state x="857" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1671578174445">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="857" y="-849" key="search.everywhere.popup/0.-1080.1920.1040/0.0.1920.1040@0.-1080.1920.1040" timestamp="1671425414354" />
+    <state x="857" y="231" width="672" height="678" key="search.everywhere.popup/0.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1671578174445" />
   </component>
 </project>
