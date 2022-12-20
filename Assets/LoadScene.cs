@@ -10,3 +10,4 @@ public class LoadScene : MonoBehaviour
         SceneManager.LoadSceneAsync(scene);
     }
 }
+

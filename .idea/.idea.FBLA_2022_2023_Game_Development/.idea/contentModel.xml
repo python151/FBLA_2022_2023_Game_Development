@@ -9,7 +9,8 @@
         <e p="BackButton.cs" t="Include" />
         <e p="GlobalSettings.cs" t="Include" />
         <e p="LoadScene.cs" t="Include" />
-        <e p="SettingsHomeButton.cs" t="Include" />
+        <e p="PauseMenuScript.cs" t="Include" />
+        <e p="ScoreBoardScript.cs" t="Include" />
         <e p="SettingsInputComponent.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
@@ -39,6 +40,7 @@
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
+        <e p="TimerScript.cs" t="Include" />
         <e p="VolumeInputSetting.cs" t="Include" />
       </e>
       <e p="FBLA_2022_2023_Game_Development.sln" t="IncludeFlat" />

@@ -11,10 +11,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/PauseMenuScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/VolumeInputSetting.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/SettingsHomeButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ScoreBoardScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SettingsInputComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PlayGameButtonHomescreen.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -24,6 +24,10 @@
         <option value="$PROJECT_DIR$/Assets/SettingsInputComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/SettingsHomeButton.cs" />
         <option value="$PROJECT_DIR$/Assets/BackButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/LoadScene.cs" />
+        <option value="$PROJECT_DIR$/Assets/TimerScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/ScoreBoardScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/PauseMenuScript.cs" />
       </list>
     </option>
   </component>
@@ -70,6 +74,9 @@
       <workItem from="1671323286666" duration="1653000" />
       <workItem from="1671324966529" duration="1476000" />
       <workItem from="1671421543079" duration="1004000" />
+      <workItem from="1671423533892" duration="1499000" />
+      <workItem from="1671425367976" duration="79499000" />
+      <workItem from="1671505940653" duration="1596000" />
     </task>
     <servers />
   </component>
@@ -80,5 +87,11 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="857" y="-849" key="search.everywhere.popup" timestamp="1671425414354">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state x="857" y="-849" key="search.everywhere.popup/0.-1080.1920.1040/0.0.1920.1040@0.-1080.1920.1040" timestamp="1671425414354" />
   </component>
 </project>
