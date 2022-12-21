@@ -12,8 +12,10 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/PauseMenuScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CurrentRoundAnimation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/VolumeInputSetting.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UserAnswerInputScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/RoundNumberAnimation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ScoreBoardScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SettingsInputComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../unity/2018.4.19f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/GraphicRaycaster.cs" root0="SKIP_HIGHLIGHTING" />
@@ -21,7 +23,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/GlobalSettings.cs" />
         <option value="$PROJECT_DIR$/Assets/SettingsInputComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/SettingsHomeButton.cs" />
         <option value="$PROJECT_DIR$/Assets/BackButton.cs" />
@@ -30,9 +31,13 @@
         <option value="$PROJECT_DIR$/Assets/PauseMenuScript.cs" />
         <option value="$PROJECT_DIR$/Assets/TimerScript.cs" />
         <option value="$PROJECT_DIR$/Assets/UserAnswerInputScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/SinglePlayerGameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/VolumeInputSetting.cs" />
         <option value="$PROJECT_DIR$/Assets/DictionaryScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/RoundNumberAnimation.cs" />
+        <option value="$PROJECT_DIR$/Assets/GlobalSettings.cs" />
+        <option value="$PROJECT_DIR$/Assets/CurrentRoundAnimation.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameManagerParent.cs" />
+        <option value="$PROJECT_DIR$/Assets/SinglePlayerGameManager.cs" />
       </list>
     </option>
   </component>
@@ -90,7 +95,12 @@
       <workItem from="1671577288692" duration="1791000" />
       <workItem from="1671579106469" duration="2484000" />
       <workItem from="1671587545717" duration="2923000" />
-      <workItem from="1671642486584" duration="1333000" />
+      <workItem from="1671642486584" duration="1859000" />
+      <workItem from="1671644359505" duration="1793000" />
+      <workItem from="1671646173855" duration="1797000" />
+      <workItem from="1671648134192" duration="1818000" />
+      <workItem from="1671649993663" duration="1716000" />
+      <workItem from="1671652595198" duration="1551000" />
     </task>
     <servers />
   </component>
@@ -103,10 +113,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="857" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1671578174445">
+    <state x="857" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1671645671193">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="857" y="-849" key="search.everywhere.popup/0.-1080.1920.1040/0.0.1920.1040@0.-1080.1920.1040" timestamp="1671425414354" />
-    <state x="857" y="231" width="672" height="678" key="search.everywhere.popup/0.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1671578174445" />
+    <state x="857" y="231" width="672" height="678" key="search.everywhere.popup/0.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1671645671193" />
   </component>
 </project>

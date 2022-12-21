@@ -5,74 +5,25 @@ using TMPro;
 using UnityEngine;
 using System.Numerics;
 using UnityEditor;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
-public class SinglePlayerGameManager : MonoBehaviour
+public class SinglePlayerGameManager : GameManagerParent
 {
-    public GameObject OutputText;
-    
-    private TextMeshProUGUI OutputTextComponent; 
-    private TMP_InputField InputTextComponent;
-
-    public string final_text;
-
-    public string current_text;
-
-    private List<int> typingPath;
-
-    private float timer = 0f;
-
-    private bool answering;
-    // Start is called before the first frame update
-    void Start()
-    {
-        // Loads all the necessary components
-        OutputTextComponent = OutputText.GetComponent<TextMeshProUGUI>();
-        InputTextComponent = OutputText.GetComponent<TMP_InputField>();
-        
-        // Setting up game
-        final_text = DictionaryScript.getWordOrPhrase();
-        current_text = GenerateInitialText(final_text);
-        OutputTextComponent.text = current_text;
-        
-        // Creates the computer's typing path
-        typingPath = new List<int>();
-        for (int i = 0; i < final_text.Length; i++)
-            typingPath.Add(i);
-        var rnd = new System.Random();
-        typingPath = typingPath.OrderBy(item => rnd.Next()).ToList();
-    }
-
-    private string GenerateInitialText(string finalText)
-    {
-        string ret = "";
-        foreach (char character in finalText)
-        {
-            ret += character == ' ' ? " " : "_";
-        }
-
-        return ret;
-    }
-
-    void WrongAnswer()
-    {
-        Debug.Log("Wrong Answer!");
-    }
-
-    void WordCompleted()
-    {
-        Debug.Log("Game Completed!!");
-    }
-
-    void ProcessAnswerState()
+    public override void ProcessAnswerState()
     {
         if (Input.GetKeyDown(KeyCode.Space) && !answering)
         {
             // Sets up input box
             InputTextComponent.enabled = true;
             InputTextComponent.text = " " + current_text; // <- includes the extra space to force the caret position to update accordingly
+            if (EventSystem.current.currentSelectedGameObject != OutputText)
+            {
+                Debug.Log("Selected!");
+                InputTextComponent.Select();
+            }
+                
             InputTextComponent.caretPosition = 0;
-            InputTextComponent.Select();
             
             // Sets up Scene
             answering = true;
@@ -86,67 +37,22 @@ public class SinglePlayerGameManager : MonoBehaviour
         InputTextComponent.enabled  = answering;
     }
 
-    void ProcessUserAnswerInput()
+    public override void WordCompleted()
     {
-        // Processes user answer input
-        if (answering && current_text != InputTextComponent.text)
+        currentRound++;
+        if (currentRound <= GlobalSettings.numRounds)
         {
-            // Removes excess characters and stops users from typing in additional wrong answers
-            bool isCorrect = false;
-            for (int i = 0; i < current_text.Length; i++)
-            {
-                if (current_text[i] != InputTextComponent.text[i])
-                {
-                    isCorrect = InputTextComponent.text[i] == final_text[i];
-                    
-                    current_text = InputTextComponent.text[i] == final_text[i] ? InputTextComponent.text.Remove(i+1, 1) : InputTextComponent.text.Remove(i, 1);
-                    InputTextComponent.text = current_text;
-                    
-                    break;
-                }
-            }
-            if (!isCorrect && !Input.GetKeyDown(KeyCode.Space)) WrongAnswer();
+            answering = false;
             
-            // Checks if word is completed
-            if (current_text == final_text) WordCompleted();
+            SceneManager.UnloadSceneAsync("Scenes/SinglePlayerAnsweringScene");
             
-            // Updates caret position (where the user types)
-            for (int i = 0; i < current_text.Length; i++)
-            {
-                if (current_text[i] != final_text[i])
-                {
-                    InputTextComponent.caretPosition = i;
-                    break;
-                }
-            }
-            InputTextComponent.text = current_text;
+            base.Start();
         }
-    }
-
-    void ComputerTyper()
-    {
-        // Types for computer
-        timer += Time.deltaTime;
-        if (timer > (TimerScript.initalTime / final_text.Length) && typingPath.Count > 0 && !answering)
+        else
         {
-            int index = typingPath[0];
-            
-            // Replaces an individual character at the given index
-            current_text = current_text.Insert(index, final_text[index].ToString()).Remove(index+1, 1);
-            OutputTextComponent.text = current_text;
-
-            typingPath = typingPath.GetRange(1, typingPath.Count - 1);
-            timer = 0;
+            currentRound = 1;
+            SceneManager.LoadSceneAsync("Scenes/GameOver");
         }
-    }
-    
-    // Update is called once per frame
-    void Update()
-    {
-        ProcessAnswerState();
-        
-        ProcessUserAnswerInput();
-       
-        ComputerTyper();
+        Debug.Log("Word Completed!!");
     }
 }
