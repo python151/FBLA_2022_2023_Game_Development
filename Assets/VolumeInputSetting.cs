@@ -6,9 +6,9 @@ using Slider = UnityEngine.UI.Slider;
 
 public class VolumeInputSetting : SettingsInputComponent
 {
-    public void ValueChanged()
+    public new void ValueChanged()
     {
-        GlobalSettings.audioVolume = inputObject.GetComponent<Slider>().value;
+        GlobalSettings.audioVolume = this.inputObject.GetComponent<Slider>().value;
         Debug.Log(GlobalSettings.audioVolume);
     }
 }

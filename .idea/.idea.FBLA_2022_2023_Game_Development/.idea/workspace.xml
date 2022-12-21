@@ -22,7 +22,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/GlobalSettings.cs" />
-        <option value="$PROJECT_DIR$/Assets/VolumeInputSetting.cs" />
         <option value="$PROJECT_DIR$/Assets/SettingsInputComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/SettingsHomeButton.cs" />
         <option value="$PROJECT_DIR$/Assets/BackButton.cs" />
@@ -33,6 +32,7 @@
         <option value="$PROJECT_DIR$/Assets/UserAnswerInputScript.cs" />
         <option value="$PROJECT_DIR$/Assets/DictionaryScript.cs" />
         <option value="$PROJECT_DIR$/Assets/SinglePlayerGameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/VolumeInputSetting.cs" />
       </list>
     </option>
   </component>
@@ -88,7 +88,7 @@
       <workItem from="1671554680067" duration="1034000" />
       <workItem from="1671575466406" duration="1793000" />
       <workItem from="1671577288692" duration="1791000" />
-      <workItem from="1671579106469" duration="1547000" />
+      <workItem from="1671579106469" duration="2484000" />
     </task>
     <servers />
   </component>
