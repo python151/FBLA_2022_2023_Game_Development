@@ -30,9 +30,9 @@
         <option value="$PROJECT_DIR$/Assets/PauseMenuScript.cs" />
         <option value="$PROJECT_DIR$/Assets/TimerScript.cs" />
         <option value="$PROJECT_DIR$/Assets/UserAnswerInputScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/DictionaryScript.cs" />
         <option value="$PROJECT_DIR$/Assets/SinglePlayerGameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/VolumeInputSetting.cs" />
+        <option value="$PROJECT_DIR$/Assets/DictionaryScript.cs" />
       </list>
     </option>
   </component>
@@ -89,6 +89,8 @@
       <workItem from="1671575466406" duration="1793000" />
       <workItem from="1671577288692" duration="1791000" />
       <workItem from="1671579106469" duration="2484000" />
+      <workItem from="1671587545717" duration="2923000" />
+      <workItem from="1671642486584" duration="1333000" />
     </task>
     <servers />
   </component>
