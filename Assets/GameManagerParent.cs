@@ -37,7 +37,7 @@ public class GameManagerParent : MonoBehaviour
         answering = false;
         InputTextComponent.enabled = false;
         timer = 0f;
-        
+
         // Setting up game
         final_text = DictionaryScript.getWordOrPhrase();
         current_text = GenerateInitialText(final_text);

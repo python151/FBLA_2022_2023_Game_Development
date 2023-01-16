@@ -12,6 +12,9 @@ public class SinglePlayerGameManager : GameManagerParent
 {
     public override void ProcessAnswerState()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+            Debug.Log(EventSystem.current.currentSelectedGameObject);
+        
         if (Input.GetKeyDown(KeyCode.Space) && !answering)
         {
             // Sets up input box
@@ -22,7 +25,6 @@ public class SinglePlayerGameManager : GameManagerParent
                 Debug.Log("Selected!");
                 InputTextComponent.Select();
             }
-                
             InputTextComponent.caretPosition = 0;
             
             // Sets up Scene
