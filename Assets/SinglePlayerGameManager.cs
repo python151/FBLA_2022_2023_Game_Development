@@ -41,6 +41,8 @@ public class SinglePlayerGameManager : GameManagerParent
 
     public override void WordCompleted()
     {
+        ScoreBoardScript.score += 5;
+
         currentRound++;
         if (currentRound <= GlobalSettings.numRounds)
         {
