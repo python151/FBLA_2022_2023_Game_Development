@@ -41,6 +41,7 @@ public class SinglePlayerGameManager : GameManagerParent
 
     public override void WordCompleted()
     {
+        TimerScript.time = TimerScript.initialTime;
         ScoreBoardScript.score += 5;
 
         currentRound++;
@@ -55,6 +56,7 @@ public class SinglePlayerGameManager : GameManagerParent
         else
         {
             currentRound = 1;
+            LeaderboardSaver.add_user(UsernameInput.current_username, ScoreBoardScript.score);
             SceneManager.LoadSceneAsync("Scenes/GameOver");
         }
         Debug.Log("Word Completed!!");

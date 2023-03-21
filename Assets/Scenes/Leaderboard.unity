@@ -375,6 +375,50 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7950270313659690546, guid: 29c17579b36eddc45bb03c2c2745cc8d, type: 3}
   m_PrefabInstance: {fileID: 74728789}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &163737815
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 163737817}
+  - component: {fileID: 163737816}
+  m_Layer: 0
+  m_Name: LeaderboardSingletonCreator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &163737816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163737815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19fb3139c2b0104c94df2eb84c28977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  location_enter: Assets/save/leaderboard.json
+--- !u!4 &163737817
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163737815}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 466.1305, y: 376.88995, z: -131.70042}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &210822309
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,6 +430,7 @@ GameObject:
   - component: {fileID: 210822310}
   - component: {fileID: 210822312}
   - component: {fileID: 210822311}
+  - component: {fileID: 210822313}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -450,6 +495,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 210822309}
   m_CullTransparentMesh: 0
+--- !u!114 &210822313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210822309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d0175ea5fab0e8468749b17dfb637f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &787960983
 GameObject:
   m_ObjectHideFlags: 0

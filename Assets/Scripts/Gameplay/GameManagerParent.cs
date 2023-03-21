@@ -112,7 +112,7 @@ public class GameManagerParent : MonoBehaviour
     {
         // Types for computer
         timer += Time.deltaTime;
-        if (timer > (TimerScript.initalTime / final_text.Length) && typingPath.Count > 0 && !answering)
+        if (timer > (TimerScript.initialTime / final_text.Length) && typingPath.Count > 0 && !answering)
         {
             int index = typingPath[0];
             

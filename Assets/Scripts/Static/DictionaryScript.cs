@@ -9,7 +9,7 @@ public class DictionaryScript : MonoBehaviour
     public static int difficulty { get; private set; } = 0;
     public static string getWordOrPhrase()
     {
-        List<string> easyList = new List<string>() {"issue", "practice", "apple", "rocks"};
+        List<string> easyList = new List<string>() {"issue", "practice", "apple", "rocks", "orange", "books"};
         List<string> mediumList = new List<string>() {"distinction", "disposition", "certification"};
         List<string> hardList = new List<string>() {"capricious", "stupendous", "convalesce", "alacrity"};
         // TODO: Make this more dynamic, maybe include an API --- Or at least a much longer word list!
