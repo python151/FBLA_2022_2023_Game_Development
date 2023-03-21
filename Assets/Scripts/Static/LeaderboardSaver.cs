@@ -76,10 +76,11 @@ public class LeaderboardSaving
         }
     }
 
-    public List<Leaderboard_Item> get_top_ten() {
+    public List<Leaderboard_Item> head(int num) {
         return current_list
                 .OrderBy(item => item.score)
-                .Take(10)
+                .Reverse()
+                .Take(num)
                 .ToList();
     }
 
@@ -97,7 +98,7 @@ public class LeaderboardSaving
     public int _get_user_rank(string username) {
         this._read();
 
-        current_list = current_list.OrderBy(item => item.score).ToList();
+        current_list = current_list.OrderBy(item => item.score).Reverse().ToList();
         for (int i = 0; i < current_list.Count; i++) {
             if (current_list[i].username == username)
                 return i+1;
@@ -128,5 +129,9 @@ public class LeaderboardSaver : MonoBehaviour
 
     public static int get_user_rank(string username) {
         return LeaderboardSaving.singleton._get_user_rank(username);
+    }
+
+    public static List<Leaderboard_Item> get_top_ten() {
+        return LeaderboardSaving.singleton.head(10);
     }
 }
