@@ -1,40 +1,31 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using SimpleJSON;
+using TMPro;
 
 public class NumAnimController : MonoBehaviour
 {
-    public Text _numberText;
-    public NumAnimData _data;
+    public TextMeshProUGUI _numberText;
     public int m_currentNum;
 
     void Start()
     {
         //AnimateFromJson("/TestData/JackpotTestFile");
-        Animate(_data);
+        Animate();
     }
 
-    public void Animate(NumAnimData d)
+    public void Animate()
     {
         // Stop previous animation
         LeanTween.cancel(gameObject);
-        LeanTween.value(gameObject, m_currentNum, d._total, d._animationTime)
+        LeanTween.value(gameObject, m_currentNum, ScoreBoardScript.score, 10)
             .setEase(LeanTweenType.easeOutQuart)
             .setOnUpdate(UpdateUI);
     }
 
-    public void AnimateFromJson(string filename)
-    {
-        JSONObject jackpot = JsonLoadforTest.LoadJsonFile(filename);
-        //Debug.Log(jackpot["Jackpotnum"]);
-        _data._total = jackpot["Jackpotnum"];
-        _data._animationTime = jackpot["animationtime"];
-        Animate(_data);
-    }
-
     public void UpdateUI(float v)
     {
-        m_currentNum = (int)v;
+        m_currentNum = (int) v;
         _numberText.text = v.ToString("0");
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 using Debug = UnityEngine.Debug;
 using System.IO;
 using System;
+using System.Linq;
 using static Leaderboard_Item;
 
 struct ListStruct
@@ -76,16 +77,30 @@ public class LeaderboardSaving
     }
 
     public List<Leaderboard_Item> get_top_ten() {
-        Debug.Log("LeaderboardSaving.get_top_ten() has NOT been implemented yet, and you're calling it... *pouts agressively*");
-        return this.current_list;
+        return current_list
+                .OrderBy(item => item.score)
+                .Take(10)
+                .ToList();
     }
 
-    public int get_user_score(string username) {
+    public int _get_user_score(string username) {
         this._read();
 
         foreach (Leaderboard_Item i in current_list) {
             if (i.username == username) 
                 return i.score;   
+        }
+
+        return -1;
+    }
+
+    public int _get_user_rank(string username) {
+        this._read();
+
+        current_list = current_list.OrderBy(item => item.score).ToList();
+        for (int i = 0; i < current_list.Count; i++) {
+            if (current_list[i].username == username)
+                return i+1;
         }
 
         return -1;
@@ -109,5 +124,9 @@ public class LeaderboardSaver : MonoBehaviour
 
     public static void add_user(string username, int score) {
         LeaderboardSaving.singleton._add_user(username, score);
+    }
+
+    public static int get_user_rank(string username) {
+        return LeaderboardSaving.singleton._get_user_rank(username);
     }
 }
