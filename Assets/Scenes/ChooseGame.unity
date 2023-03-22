@@ -2213,6 +2213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b905144f0854f94c820cbc72962344f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_second: 0
 --- !u!1 &920370544
 GameObject:
   m_ObjectHideFlags: 0
@@ -2818,6 +2819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b905144f0854f94c820cbc72962344f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_second: 1
 --- !u!114 &1181860817
 MonoBehaviour:
   m_ObjectHideFlags: 0
