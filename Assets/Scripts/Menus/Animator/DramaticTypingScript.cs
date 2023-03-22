@@ -24,6 +24,10 @@ public class DramaticTypingScript : MonoBehaviour
 
     public bool animation_complete = false;
 
+    public AudioSource AudioSource;
+
+    public AudioClip SoundClip = null;
+
     private TextMeshProUGUI tmp;
     // Start is called before the first frame update
     void Start()
@@ -48,12 +52,20 @@ public class DramaticTypingScript : MonoBehaviour
         }
     }
 
+    private void _play_sound() {
+        if (SoundClip != null) {
+            AudioSource.PlayOneShot(SoundClip);
+        }
+    }
+
     void _next_character()
     {
         if (full_text.Length > current_text.Length)
         {
             current_text = full_text.Substring(0, current_text.Length + 1);
             tmp.text = current_text;
+
+            _play_sound();
             
             // Invokes method recursively with a random delay centered around 0
             Invoke(nameof(_next_character), time_per_char + (UnityEngine.Random.value * time_variation) - time_variation/2);
