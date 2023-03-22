@@ -1,9 +1,9 @@
 # FBLA_2022_2023_Game_Development
 
 Creators:
-Matthew Miller (<a href="https://github.com/python151/">@python151</a>),
+Matthew Miller (<a href="https://github.com/python151/">@Python151</a>),
 Neil Dolecki (<a href="https://github.com/Neil-Dolecki">@Neil-Dolecki</a>),
-Elijah Mhrous
+Elijah Mhrous (<a href="https://github.com/Elijah815">@Elijah815</a>)
 
 <h2>Quick Overview</h2>
 This is our project for the FBLA Computer Game & Simulation Programming Competition for the 2022-2023 school year. We wrote this using Unity and C#. This won first place in Area 7 for Texas, and is taking us to the Texas SLC.
