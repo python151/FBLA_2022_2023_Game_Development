@@ -25,6 +25,8 @@ public class GameManagerParent : MonoBehaviour
 
     public float timer;
 
+    public int num_starting_characters = 2;
+
     public bool answering;
     // Start is called before the first frame update
     public void Start()
@@ -49,6 +51,11 @@ public class GameManagerParent : MonoBehaviour
             typingPath.Add(i);
         var rnd = new System.Random();
         typingPath = typingPath.OrderBy(item => rnd.Next()).ToList();
+
+        // Types initial characters
+        for (int i = 0; i < num_starting_characters; i++) {
+            ComputerTyperOverrided();
+        }
     }
 
     private string GenerateInitialText(string finalText)
@@ -112,7 +119,7 @@ public class GameManagerParent : MonoBehaviour
     {
         // Types for computer
         timer += Time.deltaTime;
-        if (timer > (TimerScript.initialTime / final_text.Length) && typingPath.Count > 0 && !answering)
+        if (timer > (TimerScript.initialTime / (final_text.Length-num_starting_characters)) && typingPath.Count > 0 && !answering)
         {
             int index = typingPath[0];
             
@@ -123,6 +130,17 @@ public class GameManagerParent : MonoBehaviour
             typingPath = typingPath.GetRange(1, typingPath.Count - 1);
             timer = 0;
         }
+    }
+
+    void ComputerTyperOverrided()
+    {
+        int index = typingPath[0];
+        
+        // Replaces an individual character at the given index
+        current_text = current_text.Insert(index, final_text[index].ToString()).Remove(index+1, 1);
+        OutputTextComponent.text = current_text;
+
+        typingPath = typingPath.GetRange(1, typingPath.Count - 1);
     }
     
     // Update is called once per frame

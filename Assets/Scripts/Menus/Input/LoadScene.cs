@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class LoadScene : MonoBehaviour
 {
+    public string sceneOverride = "";
     public void loadScene(string scene)
     {
-        SceneManager.LoadSceneAsync(scene);
+        SceneManager.LoadSceneAsync(sceneOverride == "" ? scene : sceneOverride);
     }
 }
 
