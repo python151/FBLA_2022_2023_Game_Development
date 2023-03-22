@@ -9,7 +9,7 @@ Elijah Mhrous (<a href="https://github.com/Elijah815">@Elijah815</a>)
 This is our project for the FBLA Computer Game & Simulation Programming Competition for the 2022-2023 school year. We wrote this using Unity and C#. This won first place in Area 7 for Texas, and is taking us to the Texas SLC.
 
 <h2>Website</h2>
-We currently have a website in the works to give instructions and a download link.
+<a href="https://neildolecki.wixsite.com/worduel">Check out our website!</a> (live as of 3/22/2023)
 
 <h2>Download and Installation Instructions</h2>
 To download a production version use the website linked above, but for a development version you can simply clone this repository using the following commad on the Linux Command Line: </br>
