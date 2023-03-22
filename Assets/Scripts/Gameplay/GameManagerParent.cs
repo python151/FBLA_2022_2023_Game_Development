@@ -28,6 +28,8 @@ public class GameManagerParent : MonoBehaviour
     public int num_starting_characters = 2;
 
     public bool answering;
+
+    public bool is_tutorial;
     // Start is called before the first frame update
     public void Start()
     {
@@ -81,7 +83,7 @@ public class GameManagerParent : MonoBehaviour
     void ProcessUserAnswerInput()
     {
         // Checks if the user has typed in characters while answering
-        if (answering && current_text != InputTextComponent.text)
+        if (answering && current_text != InputTextComponent.text && !is_tutorial)
         {
             // Removes excess characters and stops users from typing in additional wrong answers
             bool isCorrect = false;
@@ -119,7 +121,7 @@ public class GameManagerParent : MonoBehaviour
     {
         // Types for computer
         timer += Time.deltaTime;
-        if (timer > (TimerScript.initialTime / (final_text.Length-num_starting_characters)) && typingPath.Count > 0 && !answering)
+        if (timer > (TimerScript.initialTime / (final_text.Length-num_starting_characters)) && typingPath.Count > 0 && !answering && !is_tutorial)
         {
             int index = typingPath[0];
             
